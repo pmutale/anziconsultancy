@@ -1,0 +1,1 @@
+web: gunicorn anziconsultancy.project.wsgi:application --log-file -
