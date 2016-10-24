@@ -87,8 +87,4 @@ ENV/
 
 # Rope project settings
 .ropeproject
-.idea/anziconsultancy.iml
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/workspace.xml
+.idea/
