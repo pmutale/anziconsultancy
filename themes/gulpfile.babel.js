@@ -31,7 +31,7 @@ gulp.task('styles', () => {
         .pipe($.if(!browserSync.active && minify, $.cssnano()))
         .pipe($.autoprefixer({browsers: ['last 1 version']}))
         .pipe($.sourcemaps.write('.'))
-        .pipe(gulp.dest('static/irisparc/styles'))
+        .pipe(gulp.dest('static/themes/styles'))
         .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
@@ -50,7 +50,7 @@ gulp.task('lint', lint('src/scripts/**/*.js'));
 gulp.task('scripts', () => {
     return gulp.src('src/scripts/**/*.js')
         .pipe($.if(!browserSync.active && minify, $.uglify()))
-        .pipe(gulp.dest('static/irisparc/scripts'));
+        .pipe(gulp.dest('static/themes/scripts'));
 });
 
 gulp.task('vendor', () => {
@@ -65,7 +65,7 @@ gulp.task('vendor', () => {
         .pipe($.if(!browserSync.active && minify, $.uglify()))
         .pipe($.sourcemaps.write('.'))
         .pipe($.size({title: 'Vendor JS', gzip: true}))
-        .pipe(gulp.dest('static/irisparc/scripts'))
+        .pipe(gulp.dest('static/themes/scripts'))
         .pipe(jsFilter.restore)
 
         .pipe(cssFilter)
@@ -74,7 +74,7 @@ gulp.task('vendor', () => {
         .pipe($.if(!browserSync.active && minify, $.cssnano()))
         .pipe($.sourcemaps.write('.'))
         .pipe($.size({title: 'Vendor CSS', gzip: true}))
-        .pipe(gulp.dest('static/irisparc/styles'))
+        .pipe(gulp.dest('static/themes/styles'))
         .pipe(cssFilter.restore)
 
         .pipe(imageFilter)
@@ -89,12 +89,12 @@ gulp.task('vendor', () => {
             this.end();
         })))
         .pipe($.size({title: 'Vendor Images', gzip: true}))
-        .pipe(gulp.dest('static/irisparc/images'))
+        .pipe(gulp.dest('static/themes/images'))
         .pipe(imageFilter.restore)
 
         .pipe(fontFilter)
         .pipe($.size({title: 'Vendor Fonts', gzip: true}))
-        .pipe(gulp.dest('static/irisparc/fonts'));
+        .pipe(gulp.dest('static/themes/fonts'));
 });
 
 gulp.task('images', () => {
@@ -112,7 +112,7 @@ gulp.task('images', () => {
                 console.log(err);
                 this.end();
             })))
-        .pipe(gulp.dest('static/irisparc/images'));
+        .pipe(gulp.dest('static/themes/images'));
 });
 
 gulp.task('extras', () => {
@@ -121,13 +121,13 @@ gulp.task('extras', () => {
         '!src/*.html'
     ], {
         dot: true
-    }).pipe(gulp.dest('static/irisparc'));
+    }).pipe(gulp.dest('static/themes'));
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', 'static/irisparc/']));
+gulp.task('clean', del.bind(null, ['.tmp', 'static/themes/']));
 
 //gulp.task('serve:otap', () => {
-//    loc = 'http://irisparc-cms-backend.ip.otap-t.vacansoleil.local/';
+//    loc = 'http://themes-cms-backend.ip.otap-t.vacansoleil.local/';
 //    gulp.start('serve');
 //});
 
