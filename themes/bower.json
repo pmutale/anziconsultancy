@@ -1,0 +1,89 @@
+{
+  "name": "anziconsultancy",
+  "description": "consultancy",
+  "main": "",
+  "authors": [
+    "Peter <peter@mutale.nl>"
+  ],
+  "license": "MIT",
+
+  "homepage": "https://github.com/pmutale/anziconsultancy",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-datepicker": "~1.5.0",
+    "bootstrap-sass": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "jquery.cookie": "~1.4.1",
+    "jquery.migrate": "~1.2.1",
+    "matchHeight": "~0.7.0",
+    "enquire": "~2.1.2"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "./assets/stylesheets/_bootstrap.scss",
+        "./assets/javascripts/bootstrap.js",
+        "./assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+        "./assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+        "./assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "fonts/FontAwesome.otf",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.svg",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2"
+      ]
+    },
+    "jquery-ui": {
+      "main": [
+        "jquery-ui.js",
+        "ui/minified/slider.min.js",
+        "themes/base/images/ui-bg_flat_75_ffffff_40x100.png",
+        "themes/smoothness/jquery-ui.min.css",
+        "themes/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png",
+        "themes/smoothness/images/ui-bg_flat_75_ffffff_40x100.png",
+        "themes/smoothness/images/ui-bg_glass_75_dadada_1x400.png",
+        "themes/smoothness/images/ui-bg_glass_65_ffffff_1x400.png"
+      ]
+    },
+    "jquery.migrate": {
+      "main": [
+        "jquery-migrate-1.2.1.js"
+      ]
+    },
+    "jquery.cookie": {
+      "main": [
+        "jquery.cookie.js"
+      ]
+    },
+    "bootstrap-datepicker": {
+      "main": [
+        "dist/css/bootstrap-datepicker3.css",
+        "dist/js/bootstrap-datepicker.min.js",
+        "dist/locales/bootstrap-datepicker.nl.min.js",
+        "dist/locales/bootstrap-datepicker.fr.min.js",
+        "dist/locales/bootstrap-datepicker.de.min.js",
+        "dist/locales/bootstrap-datepicker.nl-BE.min.js",
+        "dist/locales/bootstrap-datepicker.da.min.js",
+        "dist/locales/bootstrap-datepicker.it.min.js",
+        "dist/locales/bootstrap-datepicker.es.min.js",
+        "dist/locales/bootstrap-datepicker.fr-CH.min.js"
+      ]
+    }
+  }
+}
