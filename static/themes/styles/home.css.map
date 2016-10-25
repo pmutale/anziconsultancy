@@ -1,0 +1,1 @@
+{"version":3,"sources":["home.scss"],"names":[],"mappings":"AAAA;EACE,2DAA0D;EAC1D,yBAAyB;CAC1B","file":"home.css","sourcesContent":["body {\n  background: url(\"../images/Under-construction.png\") center;\n  background-size: contain;\n}"]}
