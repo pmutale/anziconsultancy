@@ -81,6 +81,8 @@ celerybeat-schedule
 # virtualenv
 venv/
 ENV/
+# web:python manage.py runserver
+# heroku ps:scale web=1
 
 # Spyder project settings
 .spyderproject
