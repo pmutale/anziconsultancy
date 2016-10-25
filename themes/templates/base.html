@@ -1,0 +1,19 @@
+{% load i18n staticfiles sekizai_tags %}
+
+{% render_block 'css' %}
+{#{% render_block 'css' postprocessor 'compressor.finders.CompressorFinder' %}#}
+{% addtoblock 'css' %}
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'themes/styles/vendor.css' %}">
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'themes/styles/home.css' %}">
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'themes/styles/styles.css' %}">
+{% endaddtoblock %}
+{% block css %}{% endblock %}
+
+{% block content %} {% endblock %}
+
+{% block footer %}
+    <div class="h2"> Welcome to this Website</div>
+{% endblock %}
